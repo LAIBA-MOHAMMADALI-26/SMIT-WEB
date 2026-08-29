@@ -1,0 +1,34 @@
+h1{
+  color: red;
+  font-size: 30px;
+}
+/* this is style sheet  */
+
+#head1{
+    color: yellow;
+}
+.newstyle{
+    color: brown;
+    text-align: center;
+    font-size: 40px;
+}
+h5,h6,h4{
+    color: blueviolet;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+article{
+    /* background-color: yellow; */
+    background-color: rgb(5, 126, 7, 0);
+}
+div{
+    /* width: 200px; */
+    height: 200px;
+    /* background-color: yellowgreen; */
+    background-image: url('pic.jpg');
+    background-repeat: no-repeat;
+}
+a{
+    text-decoration: none;
+}
