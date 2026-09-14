@@ -108,3 +108,112 @@ switch (true) {
   default:
     console.log("Grade: F");
 }
+
+//loops
+
+let text1 = "";
+
+for (let i = 0; i <= 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text1;
+
+
+// print even numbers from 0 to 40 by for loop
+// print odd numbers from 1-31 for loop
+// do these by while loop also 
+//table print by for loop and while loop
+let text2 = "";
+
+let i = 0;
+while (i < 10) {
+  text += "The number is " + i + "<br>";
+  i++;
+}
+
+document.getElementById("demo").innerHTML = text2;
+
+//do while loop 
+
+let text3 = ""
+let j= 0;
+
+do {
+  text3 += "<br>The number is " + j;
+  j++;
+}
+while (j < 10);  
+
+document.getElementById("demo").innerHTML = text3;
+
+
+// Ask the user to enter a number between 1 and 10. Repeat until they enter a valid number.
+
+// do with while loop
+
+
+let text4 = "";
+
+for (let k = 0; k < 10; k++) {
+  if (k === 5) { continue; }
+  text4 += "The number is " + i + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text4;
+
+function sayHello() {
+  return "Hello World";
+}
+
+let greetings = sayHello();
+
+document.getElementById("function").innerHTML = greetings;
+
+//function of multiply, add, subtract, divide
+
+
+
+//function with two parameters
+
+function fullName(firstName, lastName) {
+  return firstName + " " + lastName;
+}
+
+let name = fullName("John", "Doe");
+
+document.getElementById("demo4").innerHTML = "The name is  " + name;
+
+
+// Write a JavaScript function that reverses a number.
+// laiba --- abial( reverse a string)
+
+
+let str = prompt("Enter a string to reverse:");
+
+    let reversedStr = str.split("").reverse().join("");
+
+    document.write("Reversed string: " + reversedStr);
+
+//reverse a string/number
+
+ 
+  // "1234"
+  //  [1,2,3,4] //splits divide the string into comma separated array 
+  //reverse [4,3,2,1] it reverses a string 
+  //join 4321 ( it converts array to string and removes commmas)
+  //  document.write ( reversedstring)
+
+
+// Example x = 32243;
+
+// Expected Output : 34223
+
+
+//Make a simple guessing game where the 
+// secret number is 7. Keep asking until the user guesses correctly.
+
+//guess -- user input
+//secret -- save your secret number
+//loop until secret==guess ( you guessed correctly)
+
