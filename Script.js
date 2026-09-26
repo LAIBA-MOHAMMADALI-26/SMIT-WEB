@@ -217,3 +217,162 @@ let str = prompt("Enter a string to reverse:");
 //secret -- save your secret number
 //loop until secret==guess ( you guessed correctly)
 
+
+
+// arrow function 
+// funcname=parameters(,)=>return
+
+const multiply = (a, b) => a * b;
+let result = multiply(4, 5);
+
+document.getElementById("demo5").innerHTML = "The product is: " + result
+
+//ARRAYS ( hetrogeneous , dynamically grow and shrink)
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo6").innerHTML = cars[1];
+cars[0] = "Opel";
+
+document.getElementById("demo7").innerHTML = cars;
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// let size = fruits.length;
+// console.log(size);
+
+//length is n ( but indexes goes from {0 - (n-1)}
+
+//converts array data type to string
+// let myList = fruits.toString();
+// console.log(myList);
+//at takes index ( and returns that element)
+// let fruit = fruits.at(2);
+
+//push inserts at last index ( at the end of an array)
+//pop removes the last element by default
+// fruits.push("Kiwi");
+// console.log(fruits);
+// fruits.pop();
+// console.log(fruits);
+
+
+// shift removes 1st element from an array ( opp for pop)
+// fruits.shift();
+// console.log(fruits);
+// fruits.unshift("Lemon");
+// console.log(fruits);
+// // checks the data type of array 
+// Array.isArray(fruits);
+
+// fruits[fruits.length] = "Kiwi";
+// fruits[3] = "peach";
+
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// document.write(Array.isArray(fruits));"<br>"
+
+document.write(delete fruits[0]);
+
+//concatenation( joining merging)
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys);
+console.log(myChildren)
+
+let first="laiba";
+let last="ali khan";
+console.log(first.concat(last));
+
+
+
+// The first parameter (2) defines the position where new elements should be added (spliced in).
+
+// The second parameter (0) defines how many elements should be removed.
+
+// The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+fruits.splice(2, 2, "Lemon", "Kiwi");
+
+fruits.splice(0, 1);
+
+
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1, 3);
+//start and end index( end will run till n-1)
+
+//index of returns the index of the passed element..
+// and position is calculated by adding 1 in it.
+
+const fruitsarray = ["Orange", "Apple", "Mango"];
+let position = fruitsarray.indexOf("Apple") + 1;
+
+document.getElementById("demo8").innerHTML = "Apple is found in position " + position;
+
+//includes return whether the element is present in the array or not 
+//true/false
+document.getElementById("demo9").innerHTML = fruits.includes("peach");
+//sorting(arranges in alphabetical order)
+document.getElementById("demo10").innerHTML = fruits;
+fruits.sort();
+document.getElementById("demo11").innerHTML = fruits;
+
+// Reverse the array:
+fruits.reverse();
+
+//logic for descending ( sort+reverse)
+
+// First sort the array-- alphabetical order ( a-z ) -ascending
+fruits.sort();
+
+// Then reverse it:( ascending reversed to descending)
+fruits.reverse();
+
+
+
+//Find the index of "JavaScript":
+// let languages = ["HTML", "CSS", "JavaScript", "React"];
+
+// Find the index of 30:
+// let nums = [10, 20, 30, 40, 50];
+
+
+// Online Store Prices
+// let prices = [1200, 450, 999, 300, 1500, 700];
+
+// A customer wants to see products from cheapest to most expensive.
+
+// Sort the array in ascending order.
+
+//a-b( asc)
+//b-a( desc)
+
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = points;  
+
+points.sort(function(a, b){return a - b});
+document.getElementById("demo2").innerHTML = points;
+
+// Student Marks
+// let marks = [65, 92, 48, 75, 88, 55];
+
+// A teacher wants to:
+
+// Sort marks from highest to lowest.
+// Check whether anyone scored exactly 75.
+
+
+const points1 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo12").innerHTML = points;  
+
+
+function myFunction() {
+  points.sort(function(){return 0.5 - Math.random()});
+  document.getElementById("demo13").innerHTML = points;
+}
+
+//random number guessing game , dice rolling 
+// let guess= random function 
+
+// guess= 7
+// secret =random function 
+
+// 1,2,3,4,5,6( dice )
