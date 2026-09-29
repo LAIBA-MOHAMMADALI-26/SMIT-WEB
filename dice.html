@@ -1,0 +1,28 @@
+<!-- //random number dice game
+Math.random() gives a random decimal, * 6 makes the range for
+ six possible values, Math.floor() removes the decimal, 
+and + 1 changes the possible results to 1, 2, 3, 4, 5, or 6. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice Rolling Game</title>
+</head>
+<body>
+
+  <h2>🎲 Dice Rolling Game</h2>
+
+  <button onclick="rollDice()">Roll Dice</button>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function rollDice() {
+      let dice = Math.floor(Math.random() * 6) + 1;
+
+      document.getElementById("result").innerHTML =
+        "You rolled: " + dice;
+    }
+  </script>
+
+</body>
+</html>

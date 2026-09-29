@@ -376,3 +376,78 @@ function myFunction() {
 // secret =random function 
 
 // 1,2,3,4,5,6( dice )
+
+
+//OBJECT TOPIC:
+
+// Objects are variables that can store both values and functions.
+
+// Values are stored as key:value pairs called properties.
+
+// Functions are stored as key:function() pairs called methods.
+// const objectname={
+//   propertykey1:value1 ,
+//   properykey2: value2
+// }
+
+const car = {
+  type:"Fiat",
+  model:500,
+  color:"white"
+};
+
+// Display Data from the Object:
+document.getElementById("demo").innerHTML = "The car type is " + car.color;
+
+// car.model ( objectname.propertyname)=value
+  //empty object and populate afterwards 
+
+
+  // Create an empty Object
+const person = {};
+
+// Add Properties
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue"; 
+
+// Display Data from Object
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+
+
+// access objects properties using [] 
+console.log(person["eyeColor"]);
+console.log(person.eyeColor);
+
+console.log(person);
+
+
+// Create an object called student with these properties:
+
+// name: "Ali"
+// age: 15
+// grade: "9th"
+
+// Then print the entire object.
+
+
+const person1 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+delete person.age;
+delete person["firstName"];
+document.getElementById("demo").innerHTML = person1.fullName();
+
+//object having student name, class, chemmarks, mathmarks,urdumarks, englishmarks,
+// object should have function that calculates the total percentage of student 
+// percentage:function ( sum chemmarks, mathmarks,urdumarks, englishmarks) total marks =400 
+
+// call this function to get student percentage and also print student name
+
