@@ -433,21 +433,393 @@ console.log(person);
 // Then print the entire object.
 
 
-const person1 = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 50,
-  fullName: function() {
-    return this.firstName + " " + this.lastName;
-  }
-};
-delete person.age;
-delete person["firstName"];
-document.getElementById("demo").innerHTML = person1.fullName();
+// const person1 = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 50,
+//   fullName: function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// };
+// delete person.age;
+// delete person["firstName"];
+// document.getElementById("demo").innerHTML = person1.fullName();
 
 //object having student name, class, chemmarks, mathmarks,urdumarks, englishmarks,
 // object should have function that calculates the total percentage of student 
 // percentage:function ( sum chemmarks, mathmarks,urdumarks, englishmarks) total marks =400 
 
 // call this function to get student percentage and also print student name
+
+
+//this concept enhances resusaibility ( same function can be used multiple times in
+// different object)
+const person1 = {
+  name: "John",
+  hello: function() {
+    return "Hello " + this.name;
+  }
+};
+
+const person2 = {
+  name: "Anna",
+  hello: function() {
+    return "Hello " + this.name;
+  }
+};
+
+document.getElementById("demo14").innerHTML = person1.hello();
+
+//map
+// JS OBJECT MAP 
+ // Map() --- object (set,get,has,delete,clear,size,keys,values)
+
+// Create a new Map
+const fruits1= new Map();
+
+// Set Map Values	( use to enter values-- set(key,value)) 
+fruits1.set("apples", 500);
+fruits1.set("bananas", 300);
+fruits1.set("oranges", 200);
+
+//in get we pass key and get the value.
+let numb = fruits1.get("apples");
+
+document.getElementById("demo").innerHTML = "There are " + numb + " apples.";
+
+//objects 
+// API PAYLOADS( JSON) JAVSCRIPT OBJECT NOTATION.
+
+
+// PERFORMANCE OPTIMZATION 
+
+//creating a map through an array (alternate approach of above)
+const fruits2=new Map([
+  ["apples",500],
+  ["oranges",400],
+  ["banana",430]
+])
+
+//this basically updates the old value bcz no duplicate keys can exist.
+fruits2.set("apples",1000)
+let checkfruit=fruits2.get("apples");
+console.log(checkfruit);
+
+console.log(typeof fruits2);
+//one key value pair makes 1 element.
+
+console.log(fruits2.size);
+
+//deleting a pair pass the key the value will automatically be deleted
+
+fruits2.delete("apples");
+//after deleting when i print size so it gives 2 bcz apples pair is deleted
+
+console.log(fruits2.size);
+
+//clear /empty the map
+// fruits2.clear();
+
+//it returns 0 bcz whole map is empty.
+
+console.log(fruits2.size);
+
+
+//has takes key and return boolean ans ( T/F);
+fruits2.has("apples");//false
+fruits2.has("oranges"); //true
+
+
+fruits2.keys();
+
+fruits2.values();
+
+
+// The filter() method creates a new array filled with elements that pass a test provided by a function.
+const ages = [32, 33, 16, 40];
+
+document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+// Array.map()///builtin function of array (loop of map-for each)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
